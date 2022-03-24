@@ -26,6 +26,7 @@ class ThirdFragment : Fragment() {
             val address = dataFourth.address
             val job = dataFourth.job
 
+            //Age
             if (age % 2 == 0) {
                 binding.age.apply {
                     text = String.format("$age, usia anda genap")
@@ -38,11 +39,13 @@ class ThirdFragment : Fragment() {
                 }
             }
 
+            //Address
             binding.address.apply {
                 text = address
                 visibility = View.VISIBLE
             }
 
+            //Job
             binding.job.apply {
                 text = job
                 visibility = View.VISIBLE
