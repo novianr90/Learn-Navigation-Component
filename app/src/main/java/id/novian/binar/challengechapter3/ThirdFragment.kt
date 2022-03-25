@@ -27,16 +27,9 @@ class ThirdFragment : Fragment() {
             val job = dataFourth.job
 
             //Age
-            if (age % 2 == 0) {
-                binding.age.apply {
-                    text = String.format("$age, usia anda genap")
-                    visibility = View.VISIBLE
-                }
-            } else {
-                binding.age.apply {
-                    text = String.format("$age, usia anda ganjil")
-                    visibility = View.VISIBLE
-                }
+            binding.age.apply {
+                text = compareAge(age)
+                visibility = View.VISIBLE
             }
 
             //Address
@@ -51,6 +44,14 @@ class ThirdFragment : Fragment() {
                 visibility = View.VISIBLE
             }
 
+        }
+    }
+
+    private fun compareAge(age: Int): String {
+        if (age % 2 == 0) {
+            return "$age, bernilai genap"
+        } else {
+            return "$age, bernilai ganjil"
         }
     }
 
