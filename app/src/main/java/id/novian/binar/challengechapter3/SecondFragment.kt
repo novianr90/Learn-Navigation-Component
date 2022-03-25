@@ -42,8 +42,5 @@ class SecondFragment : Fragment() {
         _binding = null
     }
 
-    companion object {
-        const val KEY_NAME = "name"
-    }
 
 }
